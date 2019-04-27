@@ -3,7 +3,7 @@ This is a tool to create a web server and mock data quickily. It consists of [ex
 
 # Usage
 ## Installation
-`npm install --save-dev simple-mock-server`
+`npm install --save-dev quick-mock-server`
 ## Configuration
 You can create a configuration file named `.proxyrc`, `.proxyrc.json` or `.proxyrc.js` in the project root directory. In this file, it must be or export a json object.   
 This json object is like this:
