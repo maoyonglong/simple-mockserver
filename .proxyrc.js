@@ -10,8 +10,6 @@ module.exports = {
             }
         }
     },
-    "public": [
-        "public",
-        "mock"
-    ]
+    "public": {
+    }
 }

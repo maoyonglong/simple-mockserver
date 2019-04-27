@@ -25,3 +25,9 @@ This json object is like this:
 }
 ```
 The options is equal to [http-proxy-middleware](https://github.com/chimurai/http-proxy-middleware) and the public is the static folders using [express](https://github.com/expressjs/express) to achieve.
+
+## Initalization
+```js
+var startServer = require('quick-mock-server')
+startServer()
+```
