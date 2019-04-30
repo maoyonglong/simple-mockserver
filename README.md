@@ -104,7 +104,7 @@ startServer()
 <html>
     <head>
         <meta charset = "utf-8" />
-        <script src = "https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.js" />
+        <script src = "https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.js"></script>
     </head>
     <body></body>
     <script>
