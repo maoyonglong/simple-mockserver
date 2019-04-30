@@ -20,7 +20,7 @@ function startServer() {
 
     app.use(proxy)
 
-    var port = config.port || 9000
+    var port = config.options.target.port
 
     app.listen(port, function() {
         var tip = 'server has been started, listening in port ' + port

@@ -109,7 +109,7 @@ startServer()
     <body></body>
     <script>
         axios.get('/api/test').then(function(res) {
-            document.write(res.data)
+            document.write(JSON.stringify(res.data))
         })
     </script>
 </html>

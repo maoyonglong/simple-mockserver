@@ -32,10 +32,11 @@ function initConfig(config) {
         config.options = {}
     }
 
-    var port = config.port || 9000
-
     if(typeof config.options.target === 'undefined') {
-        config.options.target = 'http://localhost:' + port
+        config.options.target.port = 9000
+    }else {
+        var port = config.options.target.port || 9000
+        config.options.target.port = port 
     }
 
     if(typeof config.options.pathRewrite !== 'undefined') {
