@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "test": "node examples/reflectToJson.js"
   },
   "author": "maoyonglong",
   "license": "MIT",
@@ -15,9 +16,8 @@
   "dependencies": {
     "colors": "^1.3.3",
     "express": "^4.16.4",
-    "http-proxy": "^1.17.0",
     "http-proxy-middleware": "^0.19.1",
-    "http-proxy-rules": "^1.1.3"
+    "minimatch": "^3.0.4"
   },
   "devDependencies": {
     "axios": "^0.18.0"

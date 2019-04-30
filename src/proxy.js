@@ -1,29 +1,14 @@
 var express = require('express')
 var httpProxy = require('http-proxy-middleware')
 var colors = require('colors')
-var config = require('./config-parser')
+var configParser = require('./config-parser')
 var path = require('path')
 
 function startServer() {
-    if(typeof config === 'undefined') {
-        throw 'Please set configuration file correctly.'
-    }
 
-    if(typeof config.options === 'undefined') {
-        config.options = {}
-    }
+    var config = configParser.getConfig()
 
-    var port = config.port || 9000
-
-    if(typeof config.options.target === 'undefined') {
-        config.options.target = 'http://localhost:' + port
-    }
-
-    if(typeof config.public === 'undefined') {
-        config.public = []
-    }else if(config.public.constructor !== Array){
-        throw 'The public field in configuration file must be an array.'
-    }
+    configParser.initConfig(config)
 
     var proxy = httpProxy(config.options)
 
@@ -34,6 +19,8 @@ function startServer() {
     })
 
     app.use(proxy)
+
+    var port = config.port || 9000
 
     app.listen(port, function() {
         var tip = 'server has been started, listening in port ' + port
